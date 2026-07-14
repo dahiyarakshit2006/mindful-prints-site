@@ -1,3 +1,94 @@
+
+Claude finished the response
+Round 1 done — all root files are there including .nojekyll and .gitignore.
+
+Now Round 2 — the assets folder. Go to this URL directly:
+
+https://github.com/dahiyarakshit2006/mindful-prints-site/upload/main/assets
+Paste that into your browser. It will open the uploader already inside the assets/ folder. Then drag all 5 SVG files from your mindfulprints/assets/ folder and commit.
+
+Go try that URL now!
+
+Screenshot 2026-07-15 at 12.43.25 AM.png
+what should i do?
+
+All 5 SVGs are queued up perfectly! Just click "Commit changes" — the green button at the bottom. That's it!
+
+Then wait 60 seconds and visit:
+https://dahiyarakshit2006.github.io/mindful-prints-site/
+
+
+excerpt_from_previous_claude_message.txt
+1 line
+
+txt
+
+but not inside assets
+
+You're right — if they're being committed to the root instead of assets/, the URL trick worked for uploading but may have dropped them at root level.
+
+Check right now — go to your repo and tell me: do you see an assets folder or just the SVG files loose at the root?
+
+If they're loose at root, here's the fix — don't re-upload. Instead I'll give you a new index.html that references the SVGs from the root (no assets/ folder needed). One file to replace, problem solved permanently.
+
+Want me to do that?
+
+
+excerpt_from_previous_claude_message.txt
+1 line
+
+txt
+
+loose on the root
+
+Perfect — easiest fix. I'll update index.html to reference the SVGs from the root instead of assets/.
+
+
+Remove assets/ prefix from all SVG references
+Remove assets/ prefix from all SVG references
+Zero remaining assets/ references — clean. Now:
+
+
+Presented file
+Presented file
+Download this new index.html and replace it on GitHub:
+
+Go to https://github.com/dahiyarakshit2006/mindful-prints-site
+Click on index.html
+Click the pencil icon (Edit) top right
+Select all the text → delete it
+Paste the contents of the new index.html file
+Click Commit changes
+Or simpler — click the three dots ⋯ on the index.html file → Delete, then upload the new one via Add file → Upload files.
+
+Wait 60 seconds after committing, then visit https://dahiyarakshit2006.github.io/mindful-prints-site/ — it will be fully live!
+
+
+Index
+Code · HTML 
+write the code here in the chat only
+
+Here's the full updated index.html — copy everything between the lines:
+
+Actually, the file is 53KB which is too long to paste cleanly in chat. The easiest way is:
+
+Download the index.html I just shared above (it's already updated and ready)
+Go to your repo → click index.html → click the pencil ✏️ icon to edit
+Press Cmd+A to select all existing code → delete it
+Open the downloaded file in a text editor (Notepad on Windows, TextEdit on Mac) → Cmd+A → Cmd+C to copy all
+Paste into GitHub editor → Commit changes
+That's the cleanest way. The file is already downloaded and waiting — it's the one I shared just before your last message.
+
+
+
+
+
+
+
+Claude is AI and can make mistakes. Please double-check responses.
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +99,7 @@
 <meta name="keywords" content="label printing Noida, rigid box manufacturer India, protective film supplier, phone packaging manufacturer, thermal transfer ribbon supplier India, barcode label printing Noida">
 <link rel="canonical" href="https://www.mindfulprints.org/">
 <meta name="robots" content="index, follow">
-
+ 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mindful Prints — Precision Printing &amp; Protective Packaging">
 <meta property="og:description" content="Labels, thermal transfer ribbons, rigid boxes, protective film, phone packaging, barcoding and die-cutting. Manufactured in Sector 63, Noida.">
@@ -19,14 +110,14 @@
 <meta name="twitter:title" content="Mindful Prints — Precision Printing &amp; Protective Packaging">
 <meta name="twitter:description" content="Labels, ribbons, rigid boxes, protective film and phone packaging, engineered in Noida.">
 <meta name="twitter:image" content="https://www.mindfulprints.org/assets/icon-only.svg">
-
+ 
 <link rel="icon" href="assets/icon-only.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icon-only.svg">
-
+ 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-
+ 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -48,7 +139,7 @@
   }
 }
 </script>
-
+ 
 <style>
 /* ============================================================
    MINDFUL PRINTS — design tokens
@@ -65,16 +156,16 @@
   --amber:#F26A1B;
   --amber-dark:#D8560C;
   --amber-wash:#FFF2E9;
-
+ 
   --display:'Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;
   --body:'IBM Plex Sans','Helvetica Neue',Arial,sans-serif;
   --mono:'IBM Plex Mono','SFMono-Regular',Menlo,monospace;
-
+ 
   --gutter:clamp(20px,5vw,64px);
   --maxw:1240px;
   --pad-y:clamp(72px,9vw,132px);
 }
-
+ 
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:78px;-webkit-text-size-adjust:100%}
 body{
@@ -86,11 +177,11 @@ img,svg{max-width:100%;display:block}
 a{color:inherit}
 h1,h2,h3,h4{font-family:var(--display);margin:0;letter-spacing:-0.025em;line-height:1.04;font-weight:700}
 p{margin:0}
-
+ 
 .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding-inline:var(--gutter)}
 .section{padding-block:var(--pad-y)}
 .section--tint{background:var(--substrate)}
-
+ 
 /* --- shared type utilities --- */
 .eyebrow{
   font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.18em;
@@ -103,7 +194,7 @@ p{margin:0}
 .lede{font-size:clamp(17px,1.5vw,19px);color:var(--graphite);max-width:62ch;margin-top:18px}
 .section-head{margin-bottom:clamp(40px,5vw,64px)}
 .section-head .h2{margin-top:16px;max-width:20ch}
-
+ 
 /* --- buttons --- */
 .btn{
   display:inline-flex;align-items:center;gap:10px;
@@ -122,7 +213,7 @@ p{margin:0}
 .btn .arrow{transition:transform .18s ease}
 .btn:hover .arrow{transform:translateX(3px)}
 :focus-visible{outline:2px solid var(--amber);outline-offset:3px}
-
+ 
 /* ============ HEADER ============ */
 .header{
   position:sticky;top:0;z-index:60;background:rgba(255,255,255,.86);
@@ -149,7 +240,7 @@ p{margin:0}
 .burger{display:none;background:none;border:1px solid var(--rule);border-radius:2px;padding:9px;cursor:pointer}
 .burger span{display:block;width:18px;height:1.5px;background:var(--ink);margin:3.5px 0}
 .nav__cta{display:none}
-
+ 
 /* ============ HERO ============ */
 .hero{position:relative;overflow:hidden;padding-block:clamp(72px,11vw,132px) clamp(64px,8vw,104px)}
 .hero__grid{
@@ -162,7 +253,7 @@ p{margin:0}
 }
 @keyframes drift{to{background-position:26px 26px}}
 .hero__in{position:relative;z-index:1;display:grid;grid-template-columns:1.35fr .65fr;gap:clamp(32px,5vw,72px);align-items:end}
-
+ 
 /* SIGNATURE: the headline prints in two passes and snaps into register */
 .plate{position:relative;display:block}
 .plate__ink{
@@ -195,7 +286,7 @@ p{margin:0}
 .regmark{position:absolute;width:34px;height:34px;opacity:.35;z-index:0}
 .regmark--tr{top:26px;right:calc(var(--gutter) - 6px)}
 .regmark--bl{bottom:22px;left:calc(var(--gutter) - 6px)}
-
+ 
 /* ============ TRUST STRIP ============ */
 .trust{background:var(--ink);color:#fff}
 .trust__in{display:grid;grid-template-columns:repeat(5,1fr);gap:2px 28px;padding-block:26px}
@@ -203,7 +294,7 @@ p{margin:0}
 .trust__n{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.02em}
 .trust__n em{font-style:normal;color:var(--amber)}
 .trust__l{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-top:5px;text-transform:uppercase}
-
+ 
 /* ============ CAPABILITY TILES ============ */
 .tiles{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
 .tile{
@@ -226,7 +317,7 @@ p{margin:0}
   color:var(--amber-dark);background:var(--amber-wash);border:1px solid #FADCC6;padding:3px 7px;border-radius:2px;
 }
 .tile:hover .new{background:#fff}
-
+ 
 /* ============ PRODUCT DEEP DIVES ============ */
 .product{padding-block:clamp(56px,6vw,84px);border-top:1px solid var(--rule)}
 .product:first-of-type{border-top:0}
@@ -247,7 +338,7 @@ p{margin:0}
   border:1px solid var(--rule);border-radius:2px;color:var(--ink-80);background:var(--paper);
 }
 .section--tint .chip{background:var(--paper)}
-
+ 
 /* ============ INDUSTRIES ============ */
 .inds{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule)}
 .ind{background:var(--paper);padding:26px 24px 28px;transition:background .2s ease}
@@ -255,7 +346,7 @@ p{margin:0}
 .ind svg{width:26px;height:26px;stroke:var(--amber-dark);stroke-width:1.4;fill:none;margin-bottom:16px}
 .ind h3{font-size:17px}
 .ind p{font-size:14px;color:var(--graphite);margin-top:7px;line-height:1.5}
-
+ 
 /* ============ WHY US ============ */
 .why{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,3vw,40px)}
 .why__i{border-top:2px solid var(--ink);padding-top:20px}
@@ -263,7 +354,7 @@ p{margin:0}
 .why__i p{font-size:14.8px;color:var(--graphite);line-height:1.55}
 .values{margin-top:clamp(44px,5vw,64px);display:flex;flex-wrap:wrap;align-items:center;gap:10px}
 .values .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-right:8px}
-
+ 
 /* ============ ABOUT ============ */
 .about{background:var(--ink);color:#fff}
 .about__in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
@@ -276,7 +367,7 @@ p{margin:0}
 .fact{background:var(--ink);padding:26px 24px}
 .fact .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.42)}
 .fact .v{font-family:var(--display);font-weight:700;font-size:19px;margin-top:9px;letter-spacing:-.02em}
-
+ 
 /* ============ ENQUIRY ============ */
 .enq__in{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,5vw,72px)}
 .form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -305,7 +396,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
 .map{margin-top:28px;border:1px solid var(--rule);line-height:0}
 .map iframe{width:100%;height:250px;border:0;filter:grayscale(1) contrast(1.05);transition:filter .3s ease}
 .map:hover iframe{filter:grayscale(0)}
-
+ 
 /* ============ FOOTER ============ */
 .footer{background:var(--ink);color:#fff;padding-block:clamp(48px,6vw,72px) 32px}
 .footer__in{display:grid;grid-template-columns:1.4fr .8fr .8fr 1fr;gap:36px}
@@ -326,11 +417,11 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
   display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
   font-family:var(--mono);font-size:11.5px;color:rgba(255,255,255,.42);letter-spacing:.03em;
 }
-
+ 
 /* ============ REVEAL ============ */
 .rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
-
+ 
 /* ============ RESPONSIVE ============ */
 @media(max-width:1040px){
   .hero__in{grid-template-columns:1fr}
@@ -363,7 +454,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
   .regmark{display:none}
   body{font-size:16px}
 }
-
+ 
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -373,7 +464,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
 </style>
 </head>
 <body>
-
+ 
 <!-- ============ HEADER ============ -->
 <header class="header" id="top">
   <div class="wrap header__in">
@@ -388,7 +479,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
       </svg>
       <span class="brand__name">Mindful<span>&nbsp;Prints</span></span>
     </a>
-
+ 
     <nav class="nav" id="nav" aria-label="Primary">
       <a href="#capabilities">Capabilities</a>
       <a href="#products">Products</a>
@@ -398,53 +489,53 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
       <a href="#enquiry">Contact</a>
       <a href="#enquiry" class="nav__cta">Get a quote →</a>
     </nav>
-
+ 
     <a class="btn btn--amber" href="#enquiry">Get a quote <span class="arrow">→</span></a>
     <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
-
+ 
 <main>
-
+ 
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="hero__grid" aria-hidden="true"></div>
-
+ 
   <svg class="regmark regmark--tr" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#14151A" stroke-width="1">
     <line x1="20" y1="0" x2="20" y2="40"/><line x1="0" y1="20" x2="40" y2="20"/><circle cx="20" cy="20" r="9"/>
   </svg>
   <svg class="regmark regmark--bl" viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="#14151A" stroke-width="1">
     <line x1="20" y1="0" x2="20" y2="40"/><line x1="0" y1="20" x2="40" y2="20"/><circle cx="20" cy="20" r="9"/>
   </svg>
-
+ 
   <div class="wrap hero__in">
     <div>
       <p class="eyebrow">Sector 63, Noida &nbsp;·&nbsp; ISO 9000 processes</p>
-
+ 
       <h1 class="plate" style="margin-top:24px">
         <span class="plate__offset" aria-hidden="true">Precision printing &amp; protective packaging, engineered for every industry.</span>
         <span class="plate__ink">Precision printing &amp; protective packaging, engineered for every industry.</span>
       </h1>
-
+ 
       <p class="hero__sub">
         <b>Labels</b><i>/</i><b>Thermal transfer ribbons</b><i>/</i><b>Rigid boxes</b><i>/</i><b>Protective film</b><i>/</i><b>Phone packaging</b><i>/</i><b>Barcoding &amp; die-cutting</b>
       </p>
-
+ 
       <div class="hero__ctas">
         <a class="btn btn--amber" href="#enquiry">Request a quote <span class="arrow">→</span></a>
         <a class="btn btn--ghost" href="#capabilities">Explore products</a>
       </div>
     </div>
-
+ 
     <aside class="hero__aside">
       <p class="k">What we make</p>
       <p>Everything that goes on a product and around it — from a pharma vial label that survives cold storage to the rigid box it ships in. One supplier, one quality standard, one delivery schedule.</p>
     </aside>
   </div>
 </section>
-
+ 
 <!-- ============ TRUST STRIP ============ -->
 <section class="trust">
   <div class="wrap trust__in">
@@ -455,7 +546,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
     <div class="trust__item"><div class="trust__n">8 industries</div><div class="trust__l">Pharma to airlines</div></div>
   </div>
 </section>
-
+ 
 <!-- ============ CAPABILITIES ============ -->
 <section class="section" id="capabilities">
   <div class="wrap">
@@ -464,7 +555,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
       <h2 class="h2">Six production lines under one roof.</h2>
       <p class="lede">Print, convert, protect, pack. Each line runs to the same tolerances, so a brand can consolidate its label, box and film sourcing with a single vendor instead of three.</p>
     </div>
-
+ 
     <div class="tiles rv">
       <a class="tile" href="#labels">
         <svg class="tile__ico" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="7" width="26" height="18" rx="2"/><path d="M3 12h26"/><circle cx="8" cy="18.5" r="1.6"/></svg>
@@ -508,7 +599,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
     </div>
   </div>
 </section>
-
+ 
 <!-- ============ PRODUCT DEEP DIVES ============ -->
 <section class="section section--tint" id="products">
   <div class="wrap">
@@ -517,7 +608,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
       <h2 class="h2">Specifications, in detail.</h2>
       <p class="lede">Everything below is made to order. Send a drawing, a sample, or just the problem — our team will spec the substrate, adhesive and finish with you.</p>
     </div>
-
+ 
     <!-- LABELS -->
     <article class="product rv" id="labels">
       <div class="product__in">
@@ -542,7 +633,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
         </div>
       </div>
     </article>
-
+ 
     <!-- RIBBONS -->
     <article class="product rv" id="ribbons">
       <div class="product__in">
@@ -562,7 +653,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
         </div>
       </div>
     </article>
-
+ 
     <!-- RIGID BOXES -->
     <article class="product rv" id="rigid">
       <div class="product__in">
@@ -589,7 +680,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
         </div>
       </div>
     </article>
-
+ 
     <!-- PROTECTIVE FILM -->
     <article class="product rv" id="film">
       <div class="product__in">
@@ -611,7 +702,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
         </div>
       </div>
     </article>
-
+ 
     <!-- PHONE PACKAGING -->
     <article class="product rv" id="phone">
       <div class="product__in">
@@ -636,7 +727,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
         </div>
       </div>
     </article>
-
+ 
     <!-- BARCODING -->
     <article class="product rv" id="barcoding">
       <div class="product__in">
@@ -657,7 +748,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
     </article>
   </div>
 </section>
-
+ 
 <!-- ============ INDUSTRIES ============ -->
 <section class="section" id="industries">
   <div class="wrap">
@@ -666,7 +757,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
       <h2 class="h2">Different rules, same tolerances.</h2>
       <p class="lede">Each sector brings its own compliance, substrate and shelf-life constraints. We build the specification around them.</p>
     </div>
-
+ 
     <div class="inds rv">
       <div class="ind">
         <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="8" width="16" height="12" rx="2"/><path d="M9 8V5a3 3 0 016 0v3M9 14h6"/></svg>
@@ -703,7 +794,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
     </div>
   </div>
 </section>
-
+ 
 <!-- ============ WHY US ============ -->
 <section class="section section--tint" id="why">
   <div class="wrap">
@@ -711,7 +802,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
       <p class="eyebrow">Why choose us</p>
       <h2 class="h2">Built to be the supplier you stop worrying about.</h2>
     </div>
-
+ 
     <div class="why rv">
       <div class="why__i">
         <h3>Innovative technology</h3>
@@ -730,7 +821,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
         <p>Materials, adhesives, structures and finishes specified to your product — including short pilot runs before you commit to volume.</p>
       </div>
     </div>
-
+ 
     <div class="values rv">
       <span class="lbl">How we work</span>
       <span class="chip">Integrity</span>
@@ -740,7 +831,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
     </div>
   </div>
 </section>
-
+ 
 <!-- ============ ABOUT ============ -->
 <section class="section about" id="about">
   <div class="wrap about__in">
@@ -753,7 +844,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
         <a class="btn btn--onDark" href="#enquiry">Talk to our team <span class="arrow">→</span></a>
       </div>
     </div>
-
+ 
     <div class="facts rv">
       <div class="fact"><div class="k">Founded</div><div class="v">2023, Noida</div></div>
       <div class="fact"><div class="k">Experience</div><div class="v">18+ years combined</div></div>
@@ -764,7 +855,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
     </div>
   </div>
 </section>
-
+ 
 <!-- ============ ENQUIRY ============ -->
 <section class="section" id="enquiry">
   <div class="wrap">
@@ -773,14 +864,14 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
       <h2 class="h2">Tell us what you need to print, protect or pack.</h2>
       <p class="lede">Share the product, the quantity and the constraint you're stuck on. You'll hear back from a person, usually within one working day.</p>
     </div>
-
+ 
     <div class="enq__in">
       <!-- SETUP: replace YOUR_ACCESS_KEY_HERE with the key from web3forms.com (free) -->
       <form class="form rv" id="enquiryForm" action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
         <input type="hidden" name="subject" value="New enquiry from mindfulprints.org">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-
+ 
         <div class="field">
           <label for="f-name">Name</label>
           <input id="f-name" name="name" type="text" required autocomplete="name" placeholder="Your full name">
@@ -814,12 +905,12 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
           <label for="f-msg">Message</label>
           <textarea id="f-msg" name="message" required placeholder="Product, substrate, quantity, timeline — whatever you have."></textarea>
         </div>
-
+ 
         <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
         <button class="btn btn--amber" type="submit" id="submitBtn">Send enquiry <span class="arrow">→</span></button>
         <p class="form-note">We reply to every enquiry. Your details are used only to respond to this request.</p>
       </form>
-
+ 
       <div class="rv">
         <div class="contact__row">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
@@ -833,7 +924,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 005 5L15 13l5 2v4a1 1 0 01-1 1A16 16 0 014 5a1 1 0 011-1z"/></svg>
           <div><div class="k">Phone</div><a class="v" href="tel:+917678352190">+91-76783-52190</a></div>
         </div>
-
+ 
         <div class="map">
           <iframe
             title="Mindful Prints location — Sector 63, Noida"
@@ -844,9 +935,9 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
     </div>
   </div>
 </section>
-
+ 
 </main>
-
+ 
 <!-- ============ FOOTER ============ -->
 <footer class="footer">
   <div class="wrap">
@@ -870,7 +961,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
           <a href="#" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zM2 5l10 7 10-7"/></svg></a>
         </div>
       </div>
-
+ 
       <div>
         <h4>Products</h4>
         <ul>
@@ -882,7 +973,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
           <li><a href="#barcoding">Barcoding &amp; die-cutting</a></li>
         </ul>
       </div>
-
+ 
       <div>
         <h4>Company</h4>
         <ul>
@@ -893,7 +984,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
           <li><a href="#enquiry">Request a quote</a></li>
         </ul>
       </div>
-
+ 
       <div>
         <h4>Contact</h4>
         <ul>
@@ -903,27 +994,27 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
         </ul>
       </div>
     </div>
-
+ 
     <div class="footer__bar">
       <span>© <span id="yr">2026</span> Mindful Prints. All rights reserved.</span>
       <span>Label &amp; packaging manufacturing · Noida, India</span>
     </div>
   </div>
 </footer>
-
+ 
 <script>
 (function(){
   'use strict';
-
+ 
   // Year
   document.getElementById('yr').textContent = new Date().getFullYear();
-
+ 
   // Sticky header border
   var header = document.querySelector('.header');
   var onScroll = function(){ header.classList.toggle('is-stuck', window.scrollY > 8); };
   onScroll();
   window.addEventListener('scroll', onScroll, {passive:true});
-
+ 
   // Mobile nav
   var burger = document.getElementById('burger');
   var nav = document.getElementById('nav');
@@ -937,7 +1028,7 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
       burger.setAttribute('aria-expanded','false');
     }
   });
-
+ 
   // Scroll reveal
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var items = document.querySelectorAll('.rv');
@@ -951,12 +1042,12 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
     }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
     items.forEach(function(el){ io.observe(el); });
   }
-
+ 
   // Enquiry form — AJAX submit (Web3Forms)
   var form = document.getElementById('enquiryForm');
   var status = document.getElementById('formStatus');
   var btn = document.getElementById('submitBtn');
-
+ 
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var key = form.querySelector('[name="access_key"]').value;
@@ -965,13 +1056,13 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
       status.textContent = 'Form not connected yet. Add your Web3Forms access key in index.html to start receiving enquiries.';
       return;
     }
-
+ 
     btn.disabled = true;
     var original = btn.innerHTML;
     btn.innerHTML = 'Sending…';
     status.className = 'form-status';
     status.textContent = '';
-
+ 
     fetch(form.action, {
       method: 'POST',
       headers: {'Accept':'application/json'},
@@ -999,3 +1090,4 @@ select{appearance:none;background-image:url("data:image/svg+xml;charset=utf-8,%3
 </script>
 </body>
 </html>
+ 

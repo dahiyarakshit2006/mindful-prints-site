@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 80" role="img" aria-label="Mindful Prints">
+  <title>Mindful Prints</title>
+  <defs>
+    <mask id="mp-plates">
+      <rect x="0" y="0" width="372" height="80" fill="#000"/>
+      <rect x="10" y="14" width="40" height="40" rx="8" fill="#fff"/>
+      <rect x="22" y="26" width="40" height="40" rx="8" fill="#fff"/>
+    </mask>
+  </defs>
+
+  <!-- Offset plates: two print passes, deliberately out of register -->
+  <rect x="10" y="14" width="40" height="40" rx="8" fill="#F26A1B"/>
+  <rect x="22" y="26" width="40" height="40" rx="8" fill="#14151A"/>
+
+  <!-- Registration mark, cut through both plates -->
+  <g mask="url(#mp-plates)" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linecap="butt">
+    <line x1="36" y1="10" x2="36" y2="70"/>
+    <line x1="6" y1="40" x2="66" y2="40"/>
+    <circle cx="36" cy="40" r="9.5"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="82" y="49" font-family="Archivo, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="700" letter-spacing="-0.8" fill="#14151A">Mindful</text>
+  <text x="212" y="49" font-family="Archivo, 'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-size="30" font-weight="500" letter-spacing="-0.4" fill="#5C606B">Prints</text>
+</svg>
